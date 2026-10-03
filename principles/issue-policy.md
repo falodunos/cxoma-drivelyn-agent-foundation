@@ -13,3 +13,6 @@ Acceptable evidence includes test or CI failure, security findings, architecture
 - Non-goals: explicit exclusions.
 - Acceptance criteria: observable outcomes and validation.
 - Suggested reviewers: roles justified by the change.
+- Source: discovery type and concrete evidence.
+
+Read-only discovery labels findings PROPOSED ISSUE. Only confirmed external creation may be labeled CREATED GITHUB ISSUE. Offline proposals explicitly record unavailable duplicate search; creation is deferred.

@@ -5,7 +5,7 @@ import re
 import sys
 import tomllib
 R = Path(__file__).resolve().parent.parent
-required = ['AGENTS.md','README.md','VERSION','principles/drivelyn-core-principles.md','principles/learning-safety.md','principles/issue-policy.md','principles/review-policy.md','reviewer-templates/learning-safety-reviewer.toml','skill-templates/README.md','contract-governance/api-consumer-rules.md','templates/codex-evaluation.md','templates/reviewer-trigger-matrix.md','scripts/validate-foundation']
+required = ['AGENTS.md','README.md','VERSION','principles/drivelyn-core-principles.md','principles/learning-safety.md','principles/issue-policy.md','principles/review-policy.md','reviewer-templates/learning-safety-reviewer.toml','skill-templates/README.md','contract-governance/api-consumer-rules.md','templates/codex-evaluation.md','templates/reviewer-trigger-matrix.md','scripts/validate-foundation','principles/autonomous-work-policy.md','skill-templates/drivelyn-issue-to-pr/SKILL.md','templates/draft-pr.md']
 errors = []
 for name in required:
     p = R / name
