@@ -45,3 +45,7 @@ Record actual read-only dry-run findings and duplicate search limitations.
 Record repository identification, connector/CLI availability, read/search probe outcomes and whether mutation was actually tested.
 
 Use VERIFIED, CONFIGURED BUT UNVERIFIED and DEFERRED labels. Configuration presence does not prove execution.
+
+## Proactive maintenance
+
+Record contract drift, docs freshness, dependency/toolchain drift, AGENTS refinement, reusable CI triage, scheduling, fingerprints/deduplication and permissions. Label each local and hosted capability VERIFIED, CONFIGURED BUT UNVERIFIED or DEFERRED independently.
