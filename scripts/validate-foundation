@@ -5,7 +5,7 @@ import re
 import sys
 import tomllib
 R = Path(__file__).resolve().parent.parent
-required = ['AGENTS.md','README.md','VERSION','principles/drivelyn-core-principles.md','principles/learning-safety.md','principles/issue-policy.md','principles/review-policy.md','reviewer-templates/learning-safety-reviewer.toml','skill-templates/README.md','contract-governance/api-consumer-rules.md','templates/codex-evaluation.md','templates/reviewer-trigger-matrix.md','scripts/validate-foundation','principles/autonomous-work-policy.md','skill-templates/drivelyn-issue-to-pr/SKILL.md','templates/draft-pr.md']
+required = ['AGENTS.md','README.md','VERSION','principles/drivelyn-core-principles.md','principles/learning-safety.md','principles/issue-policy.md','principles/review-policy.md','reviewer-templates/learning-safety-reviewer.toml','skill-templates/README.md','contract-governance/api-consumer-rules.md','templates/codex-evaluation.md','templates/reviewer-trigger-matrix.md','scripts/validate-foundation','principles/autonomous-work-policy.md','skill-templates/drivelyn-issue-to-pr/SKILL.md','templates/draft-pr.md','principles/proactive-automation-policy.md','automation-templates/proactive.py','skill-templates/drivelyn-ci-triage/SKILL.md']
 errors = []
 for name in required:
     p = R / name
@@ -23,7 +23,7 @@ try:
 except (OSError,ValueError) as e:
     errors.append(str(e))
 for p in R.rglob('*'):
-    if '.git' in p.parts or not p.is_file():
+    if any(part in {'.git', '__pycache__', 'automation-reports'} for part in p.parts) or not p.is_file():
         continue
     if p.is_symlink():
         errors.append(f'{p.relative_to(R)}: symlink')
