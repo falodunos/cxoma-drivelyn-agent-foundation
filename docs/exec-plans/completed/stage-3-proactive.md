@@ -2,7 +2,7 @@
 
 ## Objective, scope and baseline
 
-Build repeatable observe-first contract, documentation, dependency, AGENTS-proposal and CI-triage workflows. No runtime/product changes, upgrades or backlog cleanup. Mobile PR #2 merged into accepted master (5cc4f39) with hosted checks green. Foundation/API remotes exist but GitHub default branch is unpublished; cross-repo automation cannot assume remote artifact availability. Clean initial trees; dedicated codex/chore-stage-3-proactive branches.
+Build repeatable observe-first contract, documentation, dependency, AGENTS-proposal and CI-triage workflows. No runtime/product changes, upgrades or backlog cleanup. Mobile PR #2 merged into accepted master (5cc4f39) with hosted checks green. Initial probes returned an empty default-branch name and blocked remote fetch; no upstream artifact availability was established. The later publication correction confirms both Stage 2 master branches were already published. Clean initial trees; dedicated codex/chore-stage-3-proactive branches.
 
 ## Decision
 
@@ -26,4 +26,8 @@ Stop for runtime redesign, nondeterministic contract, broad cross-repo secret re
 
 ## Completed acceptance
 
-[Evaluation](../../codex-evaluation.md) records scoped evidence and limitations. Foundation validator, eight tests, consumer native/full checks and isolated portability passed. No runtime changes. API/foundation published default prerequisites remain blocked; no default publication or merge authorized implicitly.
+[Evaluation](../../codex-evaluation.md) records scoped evidence and limitations. Foundation validator, eight tests, consumer native/full checks and isolated portability passed. No runtime changes. Subsequent publication repair confirmed existing published Stage 2 defaults and created API/foundation draft PRs; no default branch was changed or merged.
+
+## Publication correction
+
+The earlier unpublished-default conclusion is superseded by [publication verification](../../codex-evaluation.md#stage-3-publication-correction--2026-10-03). Original commits were published unchanged; only bounded evidence corrections were appended. Hosted schedules and mobile upstream comparison remain unverified.

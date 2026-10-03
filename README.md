@@ -31,7 +31,7 @@ Run `./scripts/validate-foundation` with Python 3.11+; no third-party packages, 
 - [Issue-to-PR template](skill-templates/drivelyn-issue-to-pr/SKILL.md)
 - [Draft PR template](templates/draft-pr.md)
 
-Stage 2 bootstrap uses dedicated local branches and scoped commits after acceptance. No remotes or valid GitHub authentication were available; external handoff remains blocked. No recursive bootstrap issue/PR is created.
+At Stage 2 bootstrap acceptance, remotes/authentication were unavailable and external handoff was blocked. This is historical evidence. Later Stage 3 publication repair confirmed the existing published master and opened [foundation draft PR #1](https://github.com/falodunos/cxoma-drivelyn-agent-foundation/pull/1); see the [publication correction](docs/codex-evaluation.md#stage-3-publication-correction--2026-10-03). No recursive bootstrap issue/PR was created.
 
 [Stage 2 acceptance evidence](docs/stage-2-acceptance.md). Run shared behavioral checks with `python3 scripts/test_foundation.py`.
 
