@@ -3,6 +3,7 @@
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 ROOT = Path(__file__).resolve().parent.parent
@@ -11,7 +12,7 @@ class FoundationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d) / 'foundation'
             shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('.git', '__pycache__'))
-            command = [str(root / 'scripts/validate-foundation')]
+            command = [sys.executable, '-X', 'utf8', str(root / 'scripts/validate-foundation')]
             self.assertEqual(subprocess.run(command, capture_output=True).returncode, 0)
             version = root / 'VERSION'; original = version.read_text()
             version.write_text('9.9.9\n')
@@ -25,5 +26,5 @@ class FoundationTests(unittest.TestCase):
             root = Path(d) / 'foundation'
             shutil.copytree(ROOT,root,ignore=shutil.ignore_patterns('.git','__pycache__'))
             (root / 'principles/autonomous-work-policy.md').unlink()
-            self.assertNotEqual(subprocess.run([str(root / 'scripts/validate-foundation')],capture_output=True).returncode,0)
+            self.assertNotEqual(subprocess.run([sys.executable, '-X', 'utf8', str(root / 'scripts/validate-foundation')],capture_output=True).returncode,0)
 if __name__ == '__main__': unittest.main()
