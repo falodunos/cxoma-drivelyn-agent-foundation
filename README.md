@@ -15,6 +15,12 @@ Authoritative shared authoring source for Drivelyn-wide principles and portable 
 - [Codex evaluation](templates/codex-evaluation.md)
 - [Reviewer triggers](templates/reviewer-trigger-matrix.md)
 
+## Drivelyn MVP evidence pack
+
+The completed MVP/POC physical-device user journey is documented in an evidence pack produced from the physical-device acceptance run and supporting screenshots. The [Markdown journey](https://github.com/falodunos/cxoma-drivelyn-mobile/blob/master/output/pdf/drivelyn-mvp-user-journey.md) provides the textual narrative, and the [PDF walkthrough](https://github.com/falodunos/cxoma-drivelyn-mobile/blob/master/output/pdf/drivelyn-mvp-user-journey.pdf) provides the visual walkthrough. The [screenshot inventory](https://github.com/falodunos/cxoma-drivelyn-mobile/blob/master/output/pdf/drivelyn-mvp-screenshot-inventory.md) records screenshots used and excluded, evidence levels, and privacy-redaction decisions.
+
+The pack belongs in `cxoma-drivelyn-mobile` as product/mobile evidence; this foundation references it as an example output of the Codex/agent-assisted development workflow supported by repository instructions (`AGENTS.md`), execution plans, reusable skills, specialist reviewers/subagents, scope discipline, CI triage and bounded repair, and shared agent-foundation principles. The screenshots demonstrate interface and user-journey behavior. Where the acceptance build used synthetic route data, they are not evidence of real learner driving performance.
+
 ## Versioning and materialization
 
 Current version: 1.2.0, recorded in VERSION. PATCH clarifies without behavioral workflow change; MINOR adds compatible shared rules/templates; MAJOR changes shared rules/workflows requiring consumer review.
