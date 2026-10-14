@@ -23,6 +23,8 @@ The completed MVP/POC physical-device user journey is documented in an evidence 
 
 The pack belongs in `cxoma-drivelyn-mobile` as product/mobile evidence; this foundation references it as an example output of the Codex/agent-assisted development workflow supported by repository instructions (`AGENTS.md`), execution plans, reusable skills, specialist reviewers/subagents, scope discipline, CI triage and bounded repair, and shared agent-foundation principles. The screenshots demonstrate interface and user-journey behavior. Where the acceptance build used synthetic route data, they are not evidence of real learner driving performance.
 
+The [five-minute MVP pitch deck](https://github.com/falodunos/cxoma-drivelyn-mobile/blob/master/output/Drivelyn_5_Minute_MVP_Pitch_Deck.pptx) is also available in the mobile repository.
+
 ## Drivelyn applications
 
 This foundation provides shared principles and portable authoring templates for the two Drivelyn application repositories. It is not a runtime dependency; each application keeps its implementation architecture and a locally materialized snapshot of shared guidance.
