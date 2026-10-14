@@ -9,16 +9,16 @@ required = ['AGENTS.md','README.md','VERSION','principles/drivelyn-core-principl
 errors = []
 for name in required:
     p = R / name
-    if p.is_symlink() or not p.is_file() or not p.read_text().strip():
+    if p.is_symlink() or not p.is_file() or not p.read_text(encoding='utf-8').strip():
         errors.append(f'{name}: missing, empty or symlinked')
 try:
-    version = (R/'VERSION').read_text().strip()
-    if not re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)',version) or version not in (R/'README.md').read_text():
+    version = (R/'VERSION').read_text(encoding='utf-8').strip()
+    if not re.fullmatch(r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)',version) or version not in (R/'README.md').read_text(encoding='utf-8'):
         errors.append('invalid or inconsistent version')
-    role = tomllib.loads((R/'reviewer-templates/learning-safety-reviewer.toml').read_text())
+    role = tomllib.loads((R/'reviewer-templates/learning-safety-reviewer.toml').read_text(encoding='utf-8'))
     if set(role) != {'name','description','sandbox_mode','developer_instructions'} or role.get('name') != 'learning-safety-reviewer' or role.get('sandbox_mode') != 'read-only' or 'Do not edit' not in role.get('developer_instructions',''):
         errors.append('invalid read-only reviewer template')
-    if len(re.findall(r'^\d+\.',(R/'principles/drivelyn-core-principles.md').read_text(),re.M)) != 12:
+    if len(re.findall(r'^\d+\.',(R/'principles/drivelyn-core-principles.md').read_text(encoding='utf-8'),re.M)) != 12:
         errors.append('expected twelve principles')
 except (OSError,ValueError) as e:
     errors.append(str(e))
@@ -27,7 +27,7 @@ for p in R.rglob('*'):
         continue
     if p.is_symlink():
         errors.append(f'{p.relative_to(R)}: symlink')
-    content = p.read_text()
+    content = p.read_text(encoding='utf-8')
     if re.search(r'/(?:Users|home)/[\w.-]+|[A-Z]:\\Users\\',content):
         errors.append(f'{p.relative_to(R)}: personal path')
     if re.search(r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|(?:ghp_|sk_live_)[A-Za-z0-9]{16,}',content):
