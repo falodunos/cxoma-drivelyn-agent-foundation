@@ -32,6 +32,20 @@ This foundation provides shared principles and portable authoring templates for 
 - [Drivelyn API](https://github.com/falodunos/cxoma-drivelyn-api) — the backend service that owns authoritative analysis and review for scoring and publishes the public API contract consumed by client applications.
 - [Drivelyn Mobile](https://github.com/falodunos/cxoma-drivelyn-mobile) — the learner-facing mobile client for Drivelyn’s driving-learning system.
 
+
+## Request access to the private application repositories
+
+The Drivelyn Agent Foundation is public, while the application repositories are kept private.
+
+Judges and authorized reviewers can request temporary access here:
+
+**[Request access to Drivelyn Mobile / API](https://github.com/falodunos/cxoma-drivelyn-agent-foundation/issues/new?template=private-repository-access-request.yml)**
+
+Please provide only your GitHub username and the repository you need to review. Do not include passwords, tokens, private email addresses, or other sensitive information.
+
+Approved reviewers will be granted access manually through GitHub.
+
+
 ## Versioning and materialization
 
 Current version: 1.2.0, recorded in VERSION. PATCH clarifies without behavioral workflow change; MINOR adds compatible shared rules/templates; MAJOR changes shared rules/workflows requiring consumer review.

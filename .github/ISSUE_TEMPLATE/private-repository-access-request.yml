@@ -1,0 +1,58 @@
+name: Private repository access request
+description: Request temporary read access to the private Drivelyn application repositories for evaluation/review.
+title: "[Access Request] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reviewing Drivelyn.
+
+        Use this form to request access to the private application repositories that accompany the public agent-foundation repository.
+
+        **Please do not include passwords, access tokens, private email addresses, or other sensitive information in this public issue.**
+
+  - type: input
+    id: github_username
+    attributes:
+      label: GitHub username
+      description: The GitHub account that should receive repository access.
+      placeholder: octocat
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: repositories
+    attributes:
+      label: Repository access requested
+      options:
+        - label: cxoma-drivelyn-mobile
+        - label: cxoma-drivelyn-api
+    validations:
+      required: true
+
+  - type: dropdown
+    id: purpose
+    attributes:
+      label: Purpose
+      options:
+        - Hackathon / submission judging
+        - Technical evaluation
+        - Code review
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Review context
+      description: Optional brief context about the event/program or review.
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand this issue is public and I have not included sensitive information.
+          required: true
